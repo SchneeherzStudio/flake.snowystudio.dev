@@ -24,7 +24,7 @@
 
 ## Overview
 
-Flake is the product hub for [SnowyStudio](https://your-domain.com), currently home to two products:
+Flake is the product hub for [SnowyStudio](https://snowystudio.dev), currently home to two products:
 
 - **FlakeTrader** — a Discord bot for simulated trading on real market data using fictional Flake Coins (₣)
 - **FlakeSecure** *(coming soon)* — a password-free authentication system built on a zero-knowledge architecture, consisting of a mobile app and browser extension
