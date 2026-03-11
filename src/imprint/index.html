@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flake — by SnowyStudio</title>
+    <meta property="og:title" content="Flake | Imprint">
+    <meta property="og:description" content="Flake by SnowyStudio is a project with various products, all of which are free to use and have a high security standard." />
+    <meta property="og:image" content="https://flake.snowystudio.dev/img/Flake.png">
+    <meta property="og:url" content="https://flake.snowystudio.dev/imprint">
+    <meta property="og:type" content="website">
+    <base href="../">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./img/Flake.png" type="image/x-icon">
+  </head>
+  <body>
+    <!-- ═══════════════════════════════════════ NAV ═══════════════════════════════════════ -->
+    <nav>
+      <a class="nav-logo" onclick="showPage('home')">
+        <div class="nav-logo-icon"><img src="./img/Flake.png" alt="Icon" class="icon"></div>
+        <div>
+          <span class="nav-logo-text">Flake</span>
+          <span class="nav-logo-sub"> by SnowyStudio</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a onclick="showPage('home')" id="nav-home">Home</a></li>
+        <li><a onclick="showPage('trader')" id="nav-trader">FlakeTrader</a></li>
+        <li><a onclick="showPage('secure')" id="nav-secure">FlakeSecure</a></li>
+        <li>
+          <a
+            onclick="showPage('home')"
+            id="nav-about"
+            style="color: var(--text-dim)"
+            >About</a
+          >
+        </li>
+        <li>
+          <a onclick="showPage('secure')" class="nav-cta">Get Early Access</a>
+        </li>
+      </ul>
+      <button class="nav-menu-toggle" onclick="toggleMobile()">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <path
+            d="M3 6h16M3 11h16M3 16h16"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- ═══════════════════════════ PAGE: IMPRINT ═══════════════════════════ -->
+    <div class="page" id="page-imprint">
+      <div class="inner-hero" style="padding-bottom: 2rem">
+        <div class="breadcrumb">
+          <span onclick="showPage('home')">Home</span> ›
+          <span style="color: var(--text-muted)">Imprint</span>
+        </div>
+        <h1 style="font-size: clamp(1.8rem, 4vw, 3rem)">Imprint</h1>
+        <p>
+          Legal disclosure in accordance with § 5 TMG (German Telemedia Act).
+        </p>
+      </div>
+      <div class="prose">
+        <p class="last-updated">Last updated: March 2026</p>
+        <h2>Information according to § 5 TMG</h2>
+        <p>
+          <strong style="color: var(--text)">SnowyStudio</strong><br />
+          Snowy<br />
+          [Street Address (provided via email)]<br />
+          60311, Frankfurt<br />
+          Germany
+        </p>
+        <h2>Contact</h2>
+        <p>
+          Email: <a href="mailto:legal@snowystudio.dev">legal@snowystudio.dev</a
+          ><br />
+          Website: <a href="#">flake.snowystudio.dev</a>
+        </p>
+        <h2>Responsible for Content</h2>
+        <p>According to § 55 Abs. 2 RStV: [Your Name], address as above.</p>
+        <h2>Dispute Resolution</h2>
+        <p>
+          The European Commission provides a platform for online dispute
+          resolution (ODR):
+          <a href="https://ec.europa.eu/consumers/odr/" target="_blank"
+            >https://ec.europa.eu/consumers/odr/</a
+          >
+        </p>
+        <p>
+          We are neither obligated nor willing to participate in a dispute
+          settlement procedure before a consumer arbitration board.
+        </p>
+        <h2>Liability for Content</h2>
+        <p>
+          As a service provider, we are responsible for our own content on these
+          pages in accordance with general law pursuant to § 7 Abs.1 TMG.
+          According to §§ 8 to 10 TMG, however, we are not obligated as a
+          service provider to monitor transmitted or stored third-party
+          information or to investigate circumstances that indicate illegal
+          activity.
+        </p>
+        <h2>Liability for Links</h2>
+        <p>
+          Our offering contains links to external websites of third parties,
+          over whose content we have no influence. Therefore, we cannot assume
+          any liability for these external contents. The respective provider or
+          operator of the linked pages is always responsible for the content of
+          those pages.
+        </p>
+        <h2>Copyright</h2>
+        <p>
+          The content and works on these pages created by the site operator are
+          subject to German copyright law. The reproduction, processing,
+          distribution, and any kind of commercial exploitation of such material
+          beyond the scope of copyright law requires the written consent of
+          SnowyStudio.
+        </p>
+      </div>
+
+      <footer>
+        <div class="footer-inner">
+          <div
+            class="footer-bottom"
+            style="padding-top: 1.5rem; border-top: 1px solid var(--border)"
+          >
+            <span>© 2026 SnowyStudio. All rights reserved.</span
+            ><span
+              ><a
+                onclick="showPage('privacy')"
+                style="
+                  color: var(--text-dim);
+                  cursor: pointer;
+                  text-decoration: none;
+                "
+                >Privacy</a
+              >
+              ·
+              <a
+                onclick="showPage('terms')"
+                style="
+                  color: var(--text-dim);
+                  cursor: pointer;
+                  text-decoration: none;
+                "
+                >Terms</a
+              ></span
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      function showPage(name) {
+        window.location.href = `../index.html?site=${name}`
+      }
+      // ── PAGE ROUTING ──
+      function initPage(name) {
+        document
+          .querySelectorAll(".page")
+          .forEach((p) => p.classList.remove("active"));
+        document.getElementById("page-" + name).classList.add("active");
+        window.scrollTo(0, 0);
+        // update nav active state
+        document
+          .querySelectorAll(".nav-links a")
+          .forEach((a) => a.classList.remove("active"));
+        const map = {
+          home: "nav-home",
+          trader: "nav-trader",
+          secure: "nav-secure",
+        };
+        if (map[name])
+          document.getElementById(map[name])?.classList.add("active");
+      }
+
+      initPage("imprint");
+
+      // ── TYPEWRITER ──
+      const words = [
+        "Powerful.",
+        "Intuitive.",
+        "Risk-Free.",
+        "Real-Time.",
+        "Smart.",
+        "Yours.",
+      ];
+      let current = 0;
+      function rotateWord() {
+        const prev = document.getElementById("word-" + current);
+        prev.classList.remove("visible");
+        current = (current + 1) % words.length;
+        const next = document.getElementById("word-" + current);
+        next.classList.add("visible");
+      }
+      setInterval(rotateWord, 2200);
+
+      // ── MOBILE MENU ──
+      let mobileOpen = false;
+      function toggleMobile() {
+        const links = document.querySelector(".nav-links");
+        mobileOpen = !mobileOpen;
+        links.style.display = mobileOpen ? "flex" : "";
+        if (mobileOpen) {
+          links.style.flexDirection = "column";
+          links.style.position = "fixed";
+          links.style.top = "64px";
+          links.style.left = "0";
+          links.style.right = "0";
+          links.style.background = "rgba(10,10,11,0.97)";
+          links.style.padding = "1rem 2rem 2rem";
+          links.style.borderBottom = "1px solid var(--border)";
+          links.style.zIndex = "999";
+        } else {
+          links.style = "";
+        }
+      }
+
+      // Close mobile menu on page change
+      const origShowPage = showPage;
+      window.showPage = function (name) {
+        origShowPage(name);
+        if (mobileOpen) toggleMobile();
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>404 — Page Not Found · Flake</title>
+  <meta property="og:title" content="Flake | SnowyStudio">
+  <meta property="og:description" content="Flake by SnowyStudio is a project with various products, all of which are free to use and have a high security standard." />
+  <meta property="og:image" content="https://flake.snowystudio.dev/img/Flake.png">
+  <meta property="og:url" content="https://flake.snowystudio.dev/">
+  <meta property="og:type" content="website">
+  <base href="../">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #0a0a0b;
+      --bg-card: #131315;
+      --border: rgba(255,255,255,0.07);
+      --border-bright: rgba(255,255,255,0.14);
+      --text: #e8e8ec;
+      --text-muted: #7a7a85;
+      --text-dim: #4a4a55;
+      --red: #e03535;
+      --green: #22c55e;
+      --white: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 50% 50%, rgba(224,53,53,0.07) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* Grain */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      opacity: 0.35;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 480px;
+      width: 100%;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      margin-bottom: 3rem;
+    }
+
+    .logo-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;color:white;font-family:'Syne',sans-serif;font-weight:800;}
+    .icon{width:100%;height:100%;}
+
+    .logo-text {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--white);
+    }
+
+    .error-code {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(6rem, 20vw, 9rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -6px;
+      color: var(--white);
+      opacity: 0.06;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--red), transparent);
+      opacity: 0.7;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0.3rem 0.8rem;
+      background: rgba(224,53,53,0.12);
+      border: 1px solid rgba(224,53,53,0.25);
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--red);
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.04em;
+    }
+
+    h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.8px;
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      font-weight: 300;
+      line-height: 1.65;
+      margin-bottom: 2rem;
+    }
+
+    .actions {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--red);
+      color: white;
+      border: none;
+      padding: 0.65rem 1.4rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: 'DM Sans', sans-serif;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover { background: #c42a2a; }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--border-bright);
+      padding: 0.65rem 1.4rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 400;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: 'DM Sans', sans-serif;
+      transition: background 0.2s, color 0.2s;
+      display: inline-block;
+    }
+
+    .btn-secondary:hover { background: rgba(255,255,255,0.05); color: var(--text); }
+
+    .footer-note {
+      margin-top: 2rem;
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+  </style>
+  <link rel="shortcut icon" href="./img/Flake.png" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <a href="/" class="logo">
+      <div class="logo-icon"><img src="./img/Flake.png" alt="Icon" class="icon" /></div>
+      <span class="logo-text">Flake</span>
+    </a>
+
+    <div style="position:relative;">
+      <div class="error-code">404</div>
+      <div class="card">
+        <div class="status-badge">404 · Not Found</div>
+        <h1>Lost in the snow.</h1>
+        <p>The page you're looking for doesn't exist — it may have been moved, deleted, or never existed in the first place.</p>
+        <div class="actions">
+          <a href="/" class="btn-primary">Back to Home</a>
+          <a href="/#trader" class="btn-secondary">FlakeTrader</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="footer-note">© 2025 SnowyStudio · <a href="/index.html#imprint" style="color:var(--text-dim);text-decoration:none;">Imprint</a></p>
+  </div>
+</body>
+</html>

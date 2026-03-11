@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flake — by SnowyStudio</title>
+    <meta property="og:title" content="Flake | Privacy">
+    <meta property="og:description" content="Flake by SnowyStudio is a project with various products, all of which are free to use and have a high security standard." />
+    <meta property="og:image" content="https://flake.snowystudio.dev/img/Flake.png">
+    <meta property="og:url" content="https://flake.snowystudio.dev/privacy">
+    <meta property="og:type" content="website">
+    <base href="../">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./img/Flake.png" type="image/x-icon">
+  </head>
+  <body>
+    <!-- ═══════════════════════════════════════ NAV ═══════════════════════════════════════ -->
+    <nav>
+      <a class="nav-logo" onclick="showPage('home')">
+        <div class="nav-logo-icon"><img src="./img/Flake.png" alt="Icon" class="icon"></div>
+        <div>
+          <span class="nav-logo-text">Flake</span>
+          <span class="nav-logo-sub"> by SnowyStudio</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a onclick="showPage('home')" id="nav-home">Home</a></li>
+        <li><a onclick="showPage('trader')" id="nav-trader">FlakeTrader</a></li>
+        <li><a onclick="showPage('secure')" id="nav-secure">FlakeSecure</a></li>
+        <li>
+          <a
+            onclick="showPage('home')"
+            id="nav-about"
+            style="color: var(--text-dim)"
+            >About</a
+          >
+        </li>
+        <li>
+          <a onclick="showPage('secure')" class="nav-cta">Get Early Access</a>
+        </li>
+      </ul>
+      <button class="nav-menu-toggle" onclick="toggleMobile()">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <path
+            d="M3 6h16M3 11h16M3 16h16"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- ═══════════════════════════ PAGE: PRIVACY ═══════════════════════════ -->
+    <div class="page" id="page-privacy">
+      <div class="inner-hero" style="padding-bottom: 2rem">
+        <div class="breadcrumb">
+          <span onclick="showPage('home')">Home</span> ›
+          <span style="color: var(--text-muted)">Privacy Policy</span>
+        </div>
+        <h1 style="font-size: clamp(1.8rem, 4vw, 3rem)">Privacy Policy</h1>
+        <p>How SnowyStudio collects, uses, and protects your data.</p>
+      </div>
+      <div class="prose">
+        <p class="last-updated">Last updated: January 2026</p>
+        <h2>1. Controller</h2>
+        <p>
+          The data controller responsible for processing your personal data is
+          SnowyStudio (see
+          <a onclick="showPage('imprint')" style="cursor: pointer">Imprint</a>
+          for full contact details). If you have any questions regarding data
+          protection, please contact us at
+          <a href="mailto:legal@snowystudio.dev">legal@snowystudio.dev</a>.
+        </p>
+        <h2>2. What Data We Collect</h2>
+        <h3>2.1 FlakeTrader (Discord Bot)</h3>
+        <ul>
+          <li>Your Discord user ID (to associate your trades and portfolio)</li>
+          <li>
+            Server (guild) ID of the Discord servers where the bot is active
+          </li>
+          <li>Trade history, portfolio balances, and leaderboard entries</li>
+          <li>Timestamps of commands issued</li>
+        </ul>
+        <p>
+          We do not collect your email address, real name, or any financial
+          information via FlakeTrader.
+        </p>
+        <h3>2.2 FlakeSecure (Coming Soon)</h3>
+        <ul>
+          <li>Public cryptographic keys generated on your device</li>
+          <li>Authentication event metadata (timestamps, requesting domain)</li>
+          <li>Optionally: your email address for account recovery purposes</li>
+        </ul>
+        <p>
+          FlakeSecure is built on a zero-knowledge principle. Private keys never
+          leave your device and are never transmitted to our servers.
+        </p>
+        <h3>2.3 Website</h3>
+        <ul>
+          <li>
+            Server access logs (IP address, browser type, referrer) for security
+            and analytics
+          </li>
+          <li>
+            Email addresses submitted via waitlist forms (FlakeSecure early
+            access)
+          </li>
+        </ul>
+        <h2>3. Legal Basis for Processing</h2>
+        <ul>
+          <li>
+            <strong style="color: var(--text)">Contract performance</strong>
+            (Art. 6(1)(b) GDPR): Processing necessary to provide the services
+            you use.
+          </li>
+          <li>
+            <strong style="color: var(--text)">Legitimate interests</strong>
+            (Art. 6(1)(f) GDPR): Server logs and security monitoring.
+          </li>
+          <li>
+            <strong style="color: var(--text)">Consent</strong> (Art. 6(1)(a)
+            GDPR): Waitlist registrations and optional communications.
+          </li>
+        </ul>
+        <h2>4. Data Retention</h2>
+        <p>
+          FlakeTrader data is retained as long as your account is active or as
+          required to provide the service. You can request deletion at any time.
+          Access logs are purged after 30 days. Waitlist emails are deleted upon
+          request or once the waitlist period ends.
+        </p>
+        <h2>5. Third Parties</h2>
+        <p>
+          We do not sell your data to third parties. We may share data with:
+        </p>
+        <ul>
+          <li>
+            Infrastructure providers (hosting, database) under GDPR-compliant
+            data processing agreements
+          </li>
+          <li>
+            Discord (for bot functionality — governed by Discord's own Privacy
+            Policy)
+          </li>
+          <li>Market data providers (no personal data is shared)</li>
+        </ul>
+        <h2>6. Your Rights</h2>
+        <p>
+          Under the GDPR, you have the right to: access your data, request
+          rectification, request erasure ("right to be forgotten"), data
+          portability, restriction of processing, and to object to processing.
+          To exercise these rights, contact us at
+          <a href="mailto:privacy@snowystudio.dev">privacy@snowystudio.dev</a>.
+        </p>
+        <h2>7. Cookies</h2>
+        <p>
+          This website does not use tracking cookies or third-party analytics.
+          We use only essential session data required for functionality.
+        </p>
+        <h2>8. Security</h2>
+        <p>
+          We implement appropriate technical and organisational measures to
+          protect your data, including TLS encryption in transit, access
+          controls, and regular security reviews.
+        </p>
+        <h2>9. Changes</h2>
+        <p>
+          We may update this Privacy Policy. Material changes will be
+          communicated via our website or email (where applicable). Continued
+          use of our services after the effective date constitutes acceptance.
+        </p>
+        <h2>10. Contact</h2>
+        <p>
+          For any privacy-related queries:
+          <a href="mailto:privacy@snowystudio.dev">privacy@snowystudio.dev</a>
+        </p>
+      </div>
+      <footer>
+        <div class="footer-inner">
+          <div
+            class="footer-bottom"
+            style="padding-top: 1.5rem; border-top: 1px solid var(--border)"
+          >
+            <span>© 2026 SnowyStudio. All rights reserved.</span
+            ><span
+              ><a
+                onclick="showPage('imprint')"
+                style="
+                  color: var(--text-dim);
+                  cursor: pointer;
+                  text-decoration: none;
+                "
+                >Imprint</a
+              >
+              ·
+              <a
+                onclick="showPage('terms')"
+                style="
+                  color: var(--text-dim);
+                  cursor: pointer;
+                  text-decoration: none;
+                "
+                >Terms</a
+              ></span
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      function showPage(name) {
+        window.location.href = `../index.html?site=${name}`
+      }
+      // ── PAGE ROUTING ──
+      function initPage(name) {
+        document
+          .querySelectorAll(".page")
+          .forEach((p) => p.classList.remove("active"));
+        document.getElementById("page-" + name).classList.add("active");
+        window.scrollTo(0, 0);
+        // update nav active state
+        document
+          .querySelectorAll(".nav-links a")
+          .forEach((a) => a.classList.remove("active"));
+        const map = {
+          home: "nav-home",
+          trader: "nav-trader",
+          secure: "nav-secure",
+        };
+        if (map[name])
+          document.getElementById(map[name])?.classList.add("active");
+      }
+
+      initPage("privacy");
+
+      // ── TYPEWRITER ──
+      const words = [
+        "Powerful.",
+        "Intuitive.",
+        "Risk-Free.",
+        "Real-Time.",
+        "Smart.",
+        "Yours.",
+      ];
+      let current = 0;
+      function rotateWord() {
+        const prev = document.getElementById("word-" + current);
+        prev.classList.remove("visible");
+        current = (current + 1) % words.length;
+        const next = document.getElementById("word-" + current);
+        next.classList.add("visible");
+      }
+      setInterval(rotateWord, 2200);
+
+      // ── MOBILE MENU ──
+      let mobileOpen = false;
+      function toggleMobile() {
+        const links = document.querySelector(".nav-links");
+        mobileOpen = !mobileOpen;
+        links.style.display = mobileOpen ? "flex" : "";
+        if (mobileOpen) {
+          links.style.flexDirection = "column";
+          links.style.position = "fixed";
+          links.style.top = "64px";
+          links.style.left = "0";
+          links.style.right = "0";
+          links.style.background = "rgba(10,10,11,0.97)";
+          links.style.padding = "1rem 2rem 2rem";
+          links.style.borderBottom = "1px solid var(--border)";
+          links.style.zIndex = "999";
+        } else {
+          links.style = "";
+        }
+      }
+
+      // Close mobile menu on page change
+      const origShowPage = showPage;
+      window.showPage = function (name) {
+        origShowPage(name);
+        if (mobileOpen) toggleMobile();
+      };
+    </script>
+  </body>
+</html>

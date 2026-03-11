@@ -1,0 +1,1846 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flake — by SnowyStudio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./img/Flake.png" type="image/x-icon">
+  </head>
+  <body>
+    <!-- ═══════════════════════════════════════ NAV ═══════════════════════════════════════ -->
+    <nav>
+      <a class="nav-logo" onclick="showPage('home')">
+        <div class="nav-logo-icon">
+          <img src="./img/Flake.png" alt="Icon" class="icon" />
+        </div>
+        <div>
+          <span class="nav-logo-text">Flake</span>
+          <span class="nav-logo-sub"> by SnowyStudio</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a onclick="showPage('home')" id="nav-home">Home</a></li>
+        <li><a onclick="showPage('trader')" id="nav-trader">FlakeTrader</a></li>
+        <li><a onclick="showPage('secure')" id="nav-secure">FlakeSecure</a></li>
+        <li>
+          <a
+            onclick="showPage('home')"
+            id="nav-about"
+            style="color: var(--text-dim)"
+            >About</a
+          >
+        </li>
+        <li>
+          <a onclick="showPage('secure')" class="nav-cta">Get Early Access</a>
+        </li>
+      </ul>
+      <button class="nav-menu-toggle" onclick="toggleMobile()">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <path
+            d="M3 6h16M3 11h16M3 16h16"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- ═══════════════════════════ PAGE: HOME ═══════════════════════════ -->
+    <div class="page active" id="page-home">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-badge">
+          <span class="dot"></span> Flake Products by SnowyStudio
+        </div>
+        <h1>
+          <span class="hero-static">FlakeTrader is</span><br />
+          <span class="hero-typewriter-line">
+            <span class="hero-dynamic" id="dynamic-word">
+              <span class="word visible" id="word-0">Powerful.</span>
+              <span class="word" id="word-1">Intuitive.</span>
+              <span class="word" id="word-2">Risk-Free.</span>
+              <span class="word" id="word-3">Real-Time.</span>
+              <span class="word" id="word-4">Smart.</span>
+              <span class="word" id="word-5">Yours.</span>
+            </span>
+            <span class="hero-cursor"></span>
+          </span>
+        </h1>
+        <p class="hero-sub">
+          Trade with fictional currency on real markets. Build your strategy,
+          sharpen your edge — no risk, all the thrill. Secured by FlakeSecure.
+        </p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="showPage('trader')">
+            Explore FlakeTrader
+          </button>
+          <button class="btn-secondary" onclick="showPage('secure')">
+            FlakeSecure →
+          </button>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PRODUCTS -->
+      <div class="section">
+        <p class="section-label">Our Products</p>
+        <h2 class="section-title">
+          Everything you need.<br />Nothing you don't.
+        </h2>
+        <p class="section-desc">
+          SnowyStudio builds focused tools that help you trade smarter and stay
+          secure — no bloat, no compromise.
+        </p>
+
+        <div class="products-grid">
+          <div class="product-card trader" onclick="showPage('trader')">
+            <div class="card-icon trader">📈</div>
+            <span class="card-tag live">Live</span>
+            <h3 class="card-title">FlakeTrader</h3>
+            <p class="card-desc">
+              A Discord bot that lets you trade on real market data using
+              fictional currency. Practice strategies, compete with friends, and
+              master the markets — risk free.
+            </p>
+            <span class="card-arrow">Learn more <span>→</span></span>
+          </div>
+
+          <div class="product-card secure" onclick="showPage('secure')">
+            <div class="card-icon secure">🔐</div>
+            <span class="card-tag coming">Coming Soon</span>
+            <h3 class="card-title">FlakeSecure</h3>
+            <p class="card-desc">
+              One secure login for every website — powered by a companion app
+              and a lightweight browser extension. No passwords. No friction.
+              Total control.
+            </p>
+            <span class="card-arrow">Learn more <span>→</span></span>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- TRADER PREVIEW -->
+      <div class="feature-row">
+        <div>
+          <p class="section-label">FlakeTrader</p>
+          <h2 class="section-title">Real markets,<br />zero risk.</h2>
+          <p class="section-desc">
+            FlakeTrader connects to live market data and lets your Discord
+            community trade using fictional Flake Coins. The leaderboard never
+            lies.
+          </p>
+          <ul
+            style="
+              list-style: none;
+              margin-top: 1.5rem;
+              display: flex;
+              flex-direction: column;
+              gap: 0.6rem;
+            "
+          >
+            <li
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 0.88rem;
+                color: var(--text-muted);
+              "
+            >
+              <span style="color: var(--green)">✓</span> Live stock, crypto &
+              forex data
+            </li>
+            <li
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 0.88rem;
+                color: var(--text-muted);
+              "
+            >
+              <span style="color: var(--green)">✓</span> Fictional currency,
+              real market prices
+            </li>
+            <li
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 0.88rem;
+                color: var(--text-muted);
+              "
+            >
+              <span style="color: var(--green)">✓</span> Discord-native commands
+            </li>
+            <li
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 0.88rem;
+                color: var(--text-muted);
+              "
+            >
+              <span style="color: var(--green)">✓</span> Portfolio tracking &
+              leaderboards
+            </li>
+          </ul>
+          <button
+            class="btn-primary"
+            style="margin-top: 1.75rem"
+            onclick="showPage('trader')"
+          >
+            View FlakeTrader
+          </button>
+        </div>
+        <div class="feature-visual">
+          <div class="ticker-demo">
+            <div class="ticker-header">
+              <span class="ticker-symbol">BTC/USD</span>
+              <span class="ticker-price">$67,420</span>
+            </div>
+            <div class="ticker-row">
+              <span class="label">24h Change</span
+              ><span class="up">+2.34%</span>
+            </div>
+            <div class="ticker-row">
+              <span class="label">Your Position</span
+              ><span style="color: var(--text)">2.4 BTC</span>
+            </div>
+            <div class="ticker-row">
+              <span class="label">P&L (Flake)</span
+              ><span class="up">+₣ 3,820</span>
+            </div>
+            <div class="ticker-row">
+              <span class="label">Rank</span
+              ><span style="color: var(--gold)">🏆 #3</span>
+            </div>
+            <div class="chart-bars">
+              <div
+                class="bar"
+                style="
+                  height: 35%;
+                  background: var(--red-soft);
+                  border: 1px solid var(--red);
+                  animation-delay: 0s;
+                "
+              ></div>
+              <div
+                class="bar"
+                style="
+                  height: 55%;
+                  background: var(--green-soft);
+                  border: 1px solid var(--green);
+                  animation-delay: 0.05s;
+                "
+              ></div>
+              <div
+                class="bar"
+                style="
+                  height: 42%;
+                  background: var(--red-soft);
+                  border: 1px solid var(--red);
+                  animation-delay: 0.1s;
+                "
+              ></div>
+              <div
+                class="bar"
+                style="
+                  height: 70%;
+                  background: var(--green-soft);
+                  border: 1px solid var(--green);
+                  animation-delay: 0.15s;
+                "
+              ></div>
+              <div
+                class="bar"
+                style="
+                  height: 60%;
+                  background: var(--green-soft);
+                  border: 1px solid var(--green);
+                  animation-delay: 0.2s;
+                "
+              ></div>
+              <div
+                class="bar"
+                style="
+                  height: 80%;
+                  background: var(--green-soft);
+                  border: 1px solid var(--green);
+                  animation-delay: 0.25s;
+                "
+              ></div>
+              <div
+                class="bar"
+                style="
+                  height: 65%;
+                  background: var(--green-soft);
+                  border: 1px solid var(--green);
+                  animation-delay: 0.3s;
+                "
+              ></div>
+              <div
+                class="bar"
+                style="
+                  height: 90%;
+                  background: var(--green-soft);
+                  border: 1px solid var(--green);
+                  animation-delay: 0.35s;
+                "
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- SECURE PREVIEW -->
+      <div class="feature-row reverse">
+        <div>
+          <p class="section-label">FlakeSecure — Coming Soon</p>
+          <h2 class="section-title">Login once.<br />Trust everywhere.</h2>
+          <p class="section-desc">
+            FlakeSecure replaces scattered passwords with a single,
+            cryptographically secure authentication layer. Approve logins from
+            your phone. Your browser extension does the rest.
+          </p>
+          <ul
+            style="
+              list-style: none;
+              margin-top: 1.5rem;
+              display: flex;
+              flex-direction: column;
+              gap: 0.6rem;
+            "
+          >
+            <li
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 0.88rem;
+                color: var(--text-muted);
+              "
+            >
+              <span style="color: var(--gold)">✦</span> Mobile app approval flow
+            </li>
+            <li
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 0.88rem;
+                color: var(--text-muted);
+              "
+            >
+              <span style="color: var(--gold)">✦</span> Browser extension for
+              seamless login
+            </li>
+            <li
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 0.88rem;
+                color: var(--text-muted);
+              "
+            >
+              <span style="color: var(--gold)">✦</span> End-to-end encrypted
+              keys
+            </li>
+            <li
+              style="
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 0.88rem;
+                color: var(--text-muted);
+              "
+            >
+              <span style="color: var(--gold)">✦</span> Zero knowledge
+              architecture
+            </li>
+          </ul>
+          <button
+            class="btn-secondary"
+            style="
+              margin-top: 1.75rem;
+              border-color: rgba(212, 168, 67, 0.35);
+              color: var(--gold);
+            "
+            onclick="showPage('secure')"
+          >
+            Join the waitlist
+          </button>
+        </div>
+        <div class="feature-visual">
+          <div class="secure-demo">
+            <div class="shield-icon">🛡</div>
+            <p
+              style="
+                font-size: 0.82rem;
+                color: var(--text-dim);
+                font-weight: 300;
+              "
+            >
+              Authentication request from
+              <strong style="color: var(--text-muted)">myapp.com</strong>
+            </p>
+            <div class="auth-step done">
+              <div class="step-icon">✓</div>
+              <span class="step-label">Identity verified via FlakeSecure</span>
+            </div>
+            <div class="auth-step active">
+              <div class="step-icon">⏳</div>
+              <span class="step-label">Awaiting mobile approval…</span>
+            </div>
+            <div class="auth-step pending">
+              <div class="step-icon">→</div>
+              <span class="step-label">Session token issued</span>
+            </div>
+            <div
+              style="
+                margin-top: 0.5rem;
+                padding: 0.6rem 1rem;
+                background: var(--gold-soft);
+                border: 1px solid rgba(212, 168, 67, 0.2);
+                border-radius: 8px;
+                font-size: 0.78rem;
+                color: var(--gold);
+              "
+            >
+              🔑 Encrypted key exchange — no password transmitted
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- FOOTER -->
+      <footer>
+        <div class="footer-inner">
+          <div class="footer-top">
+            <div class="footer-brand">
+              <span class="nav-logo-text">❄ Flake</span>
+              <p class="footer-tagline">
+                Products by SnowyStudio.<br />Built for traders and
+                security-conscious users.
+              </p>
+            </div>
+            <div>
+              <p class="footer-col-title">Products</p>
+              <ul class="footer-links">
+                <li><a onclick="showPage('trader')">FlakeTrader</a></li>
+                <li><a onclick="showPage('secure')">FlakeSecure</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="footer-col-title">Company</p>
+              <ul class="footer-links">
+                <li><a onclick="showPage('home')">About</a></li>
+                <li><a onclick="showPage('imprint')">Imprint</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="footer-col-title">Legal</p>
+              <ul class="footer-links">
+                <li><a onclick="showPage('privacy')">Privacy Policy</a></li>
+                <li><a onclick="showPage('terms')">Terms of Use</a></li>
+                <li><a onclick="showPage('imprint')">Imprint</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <span>© 2026 SnowyStudio. All rights reserved.</span>
+            <span>Made with ❄️ by SnowyStudio</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE: FLAKETRADER ═══════════════════════════ -->
+    <div class="page" id="page-trader">
+      <div class="inner-hero">
+        <div class="breadcrumb">
+          <span onclick="showPage('home')">Home</span> ›
+          <span style="color: var(--text-muted)">FlakeTrader</span>
+        </div>
+        <div
+          style="
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+          "
+        >
+          <div
+            class="card-icon trader"
+            style="
+              width: 52px;
+              height: 52px;
+              margin: 0;
+              border-radius: 12px;
+              font-size: 1.5rem;
+            "
+          >
+            📈
+          </div>
+          <span class="card-tag live">Live & Available</span>
+        </div>
+        <h1>FlakeTrader</h1>
+        <p>
+          Trade on real market data with fictional currency — directly inside
+          your Discord server. Practice, compete, and master the art of trading
+          without putting a single cent at risk.
+        </p>
+        <div
+          style="display: flex; gap: 0.75rem; margin-top: 2rem; flex-wrap: wrap"
+        >
+          <a
+            href="https://discord.com/oauth2/authorize?client_id=1470461406410182688"
+            target="_blank"
+          >
+            <button class="btn-primary">Add to Discord</button>
+          </a>
+          <button class="btn-secondary" onclick="toggleCmdPopup()">
+            View Commands
+          </button>
+        </div>
+      </div>
+
+      <div
+        style="
+          background: linear-gradient(
+            180deg,
+            rgba(34, 197, 94, 0.04) 0%,
+            transparent 100%
+          );
+          padding: 0.5px 0;
+        "
+      >
+        <div class="section" style="padding-top: 3rem">
+          <div class="stats-grid">
+            <div class="stat-cell">
+              <div class="stat-num" style="color: var(--green)">∞</div>
+              <div class="stat-label">Risk-free trades</div>
+            </div>
+            <div class="stat-cell">
+              <div class="stat-num">Real</div>
+              <div class="stat-label">Market data</div>
+            </div>
+            <div class="stat-cell">
+              <div class="stat-num" style="color: var(--gold)">₣</div>
+              <div class="stat-label">Flake Currency</div>
+            </div>
+          </div>
+
+          <div style="margin: 4rem 0 1.5rem">
+            <p class="section-label">Core Features</p>
+            <h2 class="section-title">Everything a trader needs.</h2>
+          </div>
+
+          <div class="features-list">
+            <div class="feature-item">
+              <div class="feature-item-icon green">📊</div>
+              <div>
+                <div class="feature-item-title">Live Market Data</div>
+                <div class="feature-item-desc">
+                  Real-time prices for stocks, crypto, forex, and more.
+                  FlakeTrader streams live feeds so every trade reflects the
+                  actual market.
+                </div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-item-icon green">💬</div>
+              <div>
+                <div class="feature-item-title">Discord-Native Commands</div>
+                <div class="feature-item-desc">
+                  Everything runs inside Discord. Use slash commands to buy,
+                  sell, check your portfolio, and view leaderboards without
+                  leaving your server.
+                </div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-item-icon red">📉</div>
+              <div>
+                <div class="feature-item-title">Long & Short Positions</div>
+                <div class="feature-item-desc">
+                  Go long or short on any supported asset. FlakeTrader simulates
+                  real position mechanics including leverage and margin calls.
+                </div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-item-icon green">🏆</div>
+              <div>
+                <div class="feature-item-title">Server Leaderboards</div>
+                <div class="feature-item-desc">
+                  Compete with your Discord community. Weekly and all-time
+                  leaderboards show who's actually good at reading the market.
+                </div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-item-icon red">📁</div>
+              <div>
+                <div class="feature-item-title">Portfolio Tracking</div>
+                <div class="feature-item-desc">
+                  A full portfolio dashboard — unrealised P&L, trade history,
+                  allocation breakdown. Know exactly where you stand at all
+                  times.
+                </div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-item-icon green">⚙️</div>
+              <div>
+                <div class="feature-item-title">Server Customisation</div>
+                <div class="feature-item-desc">
+                  Admins can set starting balances, allowed assets, cooldowns,
+                  and competition durations. Run seasonal tournaments or
+                  permanent leagues.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-section" style="margin-top: 3rem">
+            <div>
+              <h2>Ready to start trading?</h2>
+              <p>Add FlakeTrader to your Discord server in under a minute.</p>
+            </div>
+            <a
+              href="https://discord.com/oauth2/authorize?client_id=1470461406410182688"
+              target="_blank"
+            >
+              <button class="btn-primary">Add to Discord — Free</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-inner">
+          <div class="footer-top">
+            <div class="footer-brand">
+              <span class="nav-logo-text">❄ Flake</span>
+              <p class="footer-tagline">Products by SnowyStudio.</p>
+            </div>
+            <div>
+              <p class="footer-col-title">Products</p>
+              <ul class="footer-links">
+                <li><a onclick="showPage('trader')">FlakeTrader</a></li>
+                <li><a onclick="showPage('secure')">FlakeSecure</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="footer-col-title">Company</p>
+              <ul class="footer-links">
+                <li><a onclick="showPage('imprint')">Imprint</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="footer-col-title">Legal</p>
+              <ul class="footer-links">
+                <li><a onclick="showPage('privacy')">Privacy Policy</a></li>
+                <li><a onclick="showPage('terms')">Terms of Use</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <span>© 2026 SnowyStudio. All rights reserved.</span
+            ><span>Made with ❄️</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE: FLAKESECURE ═══════════════════════════ -->
+    <div class="page" id="page-secure">
+      <div
+        style="
+          background: radial-gradient(
+            ellipse 70% 50% at 50% 0%,
+            rgba(212, 168, 67, 0.09) 0%,
+            transparent 60%
+          );
+        "
+      >
+        <div class="inner-hero">
+          <div class="breadcrumb">
+            <span onclick="showPage('home')">Home</span> ›
+            <span style="color: var(--text-muted)">FlakeSecure</span>
+          </div>
+          <div
+            style="
+              display: flex;
+              gap: 12px;
+              align-items: center;
+              margin-bottom: 1.5rem;
+              flex-wrap: wrap;
+            "
+          >
+            <div
+              class="card-icon secure"
+              style="
+                width: 52px;
+                height: 52px;
+                margin: 0;
+                border-radius: 12px;
+                font-size: 1.5rem;
+              "
+            >
+              🔐
+            </div>
+            <span class="card-tag coming">Coming Soon</span>
+          </div>
+          <h1>FlakeSecure</h1>
+          <p>
+            Authentication reimagined. Log into any website using your
+            FlakeSecure app and browser extension — no passwords stored
+            anywhere, no data at risk, no compromise.
+          </p>
+          <div class="waitlist-form" id="waitlistForm1">
+            <input
+              type="email"
+              id="waitlistEmail1"
+              placeholder="your@email.com"
+            />
+            <button
+              class="btn-gold"
+              onclick="submitWaitlist('waitlistEmail1', 'waitlistMsg1')"
+            >
+              Join Waitlist
+            </button>
+          </div>
+          <p
+            id="waitlistMsg1"
+            style="margin-top: 0.6rem; font-size: 0.82rem; min-height: 1.2em"
+          ></p>
+        </div>
+      </div>
+
+      <div class="section" style="padding-top: 2rem">
+        <div class="coming-soon-banner">
+          <div class="banner-icon">🚧</div>
+          <div class="banner-text">
+            <h3>FlakeSecure is under active development</h3>
+            <p>
+              We're building something that puts security first and friction
+              last. Join the waitlist to be among the first to try it — no
+              password required to sign up, naturally.
+            </p>
+          </div>
+        </div>
+
+        <div style="margin: 3.5rem 0 1.5rem">
+          <p class="section-label">How it works</p>
+          <h2 class="section-title">Three steps to secure login.</h2>
+        </div>
+
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 3.5rem;
+          "
+        >
+          <div style="background: var(--bg-card); padding: 2rem">
+            <div
+              style="
+                font-family: &quot;Syne&quot;, sans-serif;
+                font-size: 2.5rem;
+                font-weight: 800;
+                color: rgba(212, 168, 67, 0.3);
+                line-height: 1;
+                margin-bottom: 1rem;
+              "
+            >
+              01
+            </div>
+            <h3
+              style="
+                font-family: &quot;Syne&quot;, sans-serif;
+                font-size: 1rem;
+                font-weight: 700;
+                color: var(--white);
+                margin-bottom: 0.5rem;
+              "
+            >
+              Browser Extension Detects Login
+            </h3>
+            <p
+              style="
+                font-size: 0.83rem;
+                color: var(--text-muted);
+                font-weight: 300;
+                line-height: 1.6;
+              "
+            >
+              When you visit a FlakeSecure-enabled site, the extension
+              automatically recognises the login page and initiates an
+              authentication request.
+            </p>
+          </div>
+          <div style="background: var(--bg-card); padding: 2rem">
+            <div
+              style="
+                font-family: &quot;Syne&quot;, sans-serif;
+                font-size: 2.5rem;
+                font-weight: 800;
+                color: rgba(212, 168, 67, 0.3);
+                line-height: 1;
+                margin-bottom: 1rem;
+              "
+            >
+              02
+            </div>
+            <h3
+              style="
+                font-family: &quot;Syne&quot;, sans-serif;
+                font-size: 1rem;
+                font-weight: 700;
+                color: var(--white);
+                margin-bottom: 0.5rem;
+              "
+            >
+              Approve on Your Phone
+            </h3>
+            <p
+              style="
+                font-size: 0.83rem;
+                color: var(--text-muted);
+                font-weight: 300;
+                line-height: 1.6;
+              "
+            >
+              A push notification is sent to your FlakeSecure app. One tap — and
+              your biometrics or PIN confirm it's really you. No code to type.
+            </p>
+          </div>
+          <div style="background: var(--bg-card); padding: 2rem">
+            <div
+              style="
+                font-family: &quot;Syne&quot;, sans-serif;
+                font-size: 2.5rem;
+                font-weight: 800;
+                color: rgba(212, 168, 67, 0.3);
+                line-height: 1;
+                margin-bottom: 1rem;
+              "
+            >
+              03
+            </div>
+            <h3
+              style="
+                font-family: &quot;Syne&quot;, sans-serif;
+                font-size: 1rem;
+                font-weight: 700;
+                color: var(--white);
+                margin-bottom: 0.5rem;
+              "
+            >
+              You're In — Instantly
+            </h3>
+            <p
+              style="
+                font-size: 0.83rem;
+                color: var(--text-muted);
+                font-weight: 300;
+                line-height: 1.6;
+              "
+            >
+              The extension completes the handshake and you're logged in.
+              Cryptographically verified. No password ever transmitted.
+            </p>
+          </div>
+        </div>
+
+        <!-- SECURITY DEEP DIVE -->
+        <div style="margin: 3.5rem 0 1.5rem">
+          <p class="section-label">Security Architecture</p>
+          <h2 class="section-title">
+            Security isn't a feature.<br />It's the foundation.
+          </h2>
+          <p class="section-desc" style="max-width: 600px">
+            FlakeSecure was designed from the ground up with a zero-knowledge,
+            zero-trust philosophy. Here's what that means in practice.
+          </p>
+        </div>
+
+        <div class="security-grid">
+          <div class="security-card">
+            <div class="security-card-icon">🔑</div>
+            <div class="security-card-title">End-to-End Encryption</div>
+            <div class="security-card-desc">
+              Every authentication token is encrypted on-device using asymmetric
+              key pairs. SnowyStudio servers never see your private key — only a
+              public signature.
+            </div>
+          </div>
+          <div class="security-card">
+            <div class="security-card-icon">👁️</div>
+            <div class="security-card-title">Zero-Knowledge Architecture</div>
+            <div class="security-card-desc">
+              We cannot see your credentials. Zero-knowledge proofs allow us to
+              verify your identity without ever knowing what that identity
+              contains.
+            </div>
+          </div>
+          <div class="security-card">
+            <div class="security-card-icon">📵</div>
+            <div class="security-card-title">No Password Storage</div>
+            <div class="security-card-desc">
+              FlakeSecure doesn't store passwords — not on our servers, not in
+              your browser. There's nothing to breach, nothing to leak.
+            </div>
+          </div>
+          <div class="security-card">
+            <div class="security-card-icon">📱</div>
+            <div class="security-card-title">Device-Bound Keys</div>
+            <div class="security-card-desc">
+              Private keys are generated and stored exclusively on your device
+              using the secure enclave. They never leave your hardware — ever.
+            </div>
+          </div>
+          <div class="security-card">
+            <div class="security-card-icon">🛡</div>
+            <div class="security-card-title">Phishing-Resistant</div>
+            <div class="security-card-desc">
+              Because there's no password to steal, phishing attacks are
+              fundamentally ineffective. Approval requests are cryptographically
+              bound to the requesting domain.
+            </div>
+          </div>
+          <div class="security-card">
+            <div class="security-card-icon">🔄</div>
+            <div class="security-card-title">Token Rotation</div>
+            <div class="security-card-desc">
+              Session tokens expire and rotate automatically. Stolen tokens
+              become worthless within seconds. Every session is
+              cryptographically fresh.
+            </div>
+          </div>
+          <div class="security-card">
+            <div class="security-card-icon">🌐</div>
+            <div class="security-card-title">Open Protocol</div>
+            <div class="security-card-desc">
+              The FlakeSecure authentication protocol will be publicly
+              auditable. Security through obscurity is not security — we believe
+              in transparency.
+            </div>
+          </div>
+          <div class="security-card">
+            <div class="security-card-icon">✅</div>
+            <div class="security-card-title">Multi-Factor by Default</div>
+            <div class="security-card-desc">
+              "Something you have" (your phone) plus "something you are"
+              (biometrics) is built-in by default — no optional toggle required.
+            </div>
+          </div>
+        </div>
+
+        <div style="margin: 3.5rem 0 1.5rem">
+          <p class="section-label">Platform</p>
+          <h2 class="section-title">Works everywhere you do.</h2>
+        </div>
+
+        <div class="features-list">
+          <div class="feature-item">
+            <div class="feature-item-icon gold">🌍</div>
+            <div>
+              <div class="feature-item-title">Browser Extension</div>
+              <div class="feature-item-desc">
+                Available for Chrome, Firefox, and Edge. Lightweight and
+                invisible until you need it — then it handles everything
+                automatically.
+              </div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-item-icon gold">📲</div>
+            <div>
+              <div class="feature-item-title">Mobile App</div>
+              <div class="feature-item-desc">
+                iOS and Android apps serve as your authenticator. Biometric
+                unlock. Clean interface. Instant push approvals with full
+                request context.
+              </div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-item-icon gold">🔌</div>
+            <div>
+              <div class="feature-item-title">Developer API</div>
+              <div class="feature-item-desc">
+                Integrate FlakeSecure authentication into your own applications
+                via our SDK. Drop-in authentication that your users will
+                actually love.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="cta-section"
+          style="
+            margin-top: 3rem;
+            background: linear-gradient(
+              135deg,
+              rgba(212, 168, 67, 0.07),
+              transparent
+            );
+            border-color: rgba(212, 168, 67, 0.2);
+          "
+        >
+          <div>
+            <h2 style="color: var(--gold)">Be first to try FlakeSecure.</h2>
+            <p>
+              Join our private beta waitlist. We'll notify you the moment it's
+              ready.
+            </p>
+          </div>
+          <div class="waitlist-form" style="margin: 0">
+            <input
+              type="email"
+              id="waitlistEmail2"
+              placeholder="your@email.com"
+            />
+            <button
+              class="btn-gold"
+              onclick="submitWaitlist('waitlistEmail2', 'waitlistMsg2')"
+            >
+              Join Waitlist
+            </button>
+          </div>
+          <p
+            id="waitlistMsg2"
+            style="font-size: 0.82rem; min-height: 1.2em; margin-top: 0.5rem"
+          ></p>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-inner">
+          <div class="footer-top">
+            <div class="footer-brand">
+              <span class="nav-logo-text">❄ Flake</span>
+              <p class="footer-tagline">Products by SnowyStudio.</p>
+            </div>
+            <div>
+              <p class="footer-col-title">Products</p>
+              <ul class="footer-links">
+                <li><a onclick="showPage('trader')">FlakeTrader</a></li>
+                <li><a onclick="showPage('secure')">FlakeSecure</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="footer-col-title">Company</p>
+              <ul class="footer-links">
+                <li><a onclick="showPage('imprint')">Imprint</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="footer-col-title">Legal</p>
+              <ul class="footer-links">
+                <li><a onclick="showPage('privacy')">Privacy Policy</a></li>
+                <li><a onclick="showPage('terms')">Terms of Use</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <span>© 2026 SnowyStudio. All rights reserved.</span
+            ><span>Made with ❄️</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE: IMPRINT ═══════════════════════════ -->
+    <div class="page" id="page-imprint">
+      <div class="inner-hero" style="padding-bottom: 2rem">
+        <div class="breadcrumb">
+          <span onclick="showPage('home')">Home</span> ›
+          <span style="color: var(--text-muted)">Imprint</span>
+        </div>
+        <h1 style="font-size: clamp(1.8rem, 4vw, 3rem)">Imprint</h1>
+        <p>
+          Legal disclosure in accordance with § 5 TMG (German Telemedia Act).
+        </p>
+      </div>
+      <div class="prose">
+        <p class="last-updated">Last updated: March 2026</p>
+        <h2>Information according to § 5 TMG</h2>
+        <p>
+          <strong style="color: var(--text)">SnowyStudio</strong><br />
+          Snowy<br />
+          [Street Address (provided via email)]<br />
+          60311, Frankfurt<br />
+          Germany
+        </p>
+        <h2>Contact</h2>
+        <p>
+          Email: <a href="mailto:legal@snowystudio.dev">legal@snowystudio.dev</a
+          ><br />
+          Website: <a href="#">flake.snowystudio.dev</a>
+        </p>
+        <h2>Responsible for Content</h2>
+        <p>According to § 55 Abs. 2 RStV: [Your Name], address as above.</p>
+        <h2>Dispute Resolution</h2>
+        <p>
+          The European Commission provides a platform for online dispute
+          resolution (ODR):
+          <a href="https://ec.europa.eu/consumers/odr/" target="_blank"
+            >https://ec.europa.eu/consumers/odr/</a
+          >
+        </p>
+        <p>
+          We are neither obligated nor willing to participate in a dispute
+          settlement procedure before a consumer arbitration board.
+        </p>
+        <h2>Liability for Content</h2>
+        <p>
+          As a service provider, we are responsible for our own content on these
+          pages in accordance with general law pursuant to § 7 Abs.1 TMG.
+          According to §§ 8 to 10 TMG, however, we are not obligated as a
+          service provider to monitor transmitted or stored third-party
+          information or to investigate circumstances that indicate illegal
+          activity.
+        </p>
+        <h2>Liability for Links</h2>
+        <p>
+          Our offering contains links to external websites of third parties,
+          over whose content we have no influence. Therefore, we cannot assume
+          any liability for these external contents. The respective provider or
+          operator of the linked pages is always responsible for the content of
+          those pages.
+        </p>
+        <h2>Copyright</h2>
+        <p>
+          The content and works on these pages created by the site operator are
+          subject to German copyright law. The reproduction, processing,
+          distribution, and any kind of commercial exploitation of such material
+          beyond the scope of copyright law requires the written consent of
+          SnowyStudio.
+        </p>
+      </div>
+
+      <footer>
+        <div class="footer-inner">
+          <div
+            class="footer-bottom"
+            style="padding-top: 1.5rem; border-top: 1px solid var(--border)"
+          >
+            <span>© 2026 SnowyStudio. All rights reserved.</span
+            ><span
+              ><a
+                onclick="showPage('privacy')"
+                style="
+                  color: var(--text-dim);
+                  cursor: pointer;
+                  text-decoration: none;
+                "
+                >Privacy</a
+              >
+              ·
+              <a
+                onclick="showPage('terms')"
+                style="
+                  color: var(--text-dim);
+                  cursor: pointer;
+                  text-decoration: none;
+                "
+                >Terms</a
+              ></span
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE: PRIVACY ═══════════════════════════ -->
+    <div class="page" id="page-privacy">
+      <div class="inner-hero" style="padding-bottom: 2rem">
+        <div class="breadcrumb">
+          <span onclick="showPage('home')">Home</span> ›
+          <span style="color: var(--text-muted)">Privacy Policy</span>
+        </div>
+        <h1 style="font-size: clamp(1.8rem, 4vw, 3rem)">Privacy Policy</h1>
+        <p>How SnowyStudio collects, uses, and protects your data.</p>
+      </div>
+      <div class="prose">
+        <p class="last-updated">Last updated: March 2026</p>
+        <h2>1. Controller</h2>
+        <p>
+          The data controller responsible for processing your personal data is
+          SnowyStudio (see
+          <a onclick="showPage('imprint')" style="cursor: pointer">Imprint</a>
+          for full contact details). If you have any questions regarding data
+          protection, please contact us at
+          <a href="mailto:legal@snowystudio.dev">legal@snowystudio.dev</a>.
+        </p>
+        <h2>2. What Data We Collect</h2>
+        <h3>2.1 FlakeTrader (Discord Bot)</h3>
+        <ul>
+          <li>Your Discord user ID (to associate your trades and portfolio)</li>
+          <li>
+            Server (guild) ID of the Discord servers where the bot is active
+          </li>
+          <li>Trade history, portfolio balances, and leaderboard entries</li>
+          <li>Timestamps of commands issued</li>
+        </ul>
+        <p>
+          We do not collect your email address, real name, or any financial
+          information via FlakeTrader.
+        </p>
+        <h3>2.2 FlakeSecure (Coming Soon)</h3>
+        <ul>
+          <li>Public cryptographic keys generated on your device</li>
+          <li>Authentication event metadata (timestamps, requesting domain)</li>
+          <li>Optionally: your email address for account recovery purposes</li>
+        </ul>
+        <p>
+          FlakeSecure is built on a zero-knowledge principle. Private keys never
+          leave your device and are never transmitted to our servers.
+        </p>
+        <h3>2.3 Website</h3>
+        <ul>
+          <li>
+            Server access logs (IP address, browser type, referrer) for security
+            and analytics
+          </li>
+          <li>
+            Email addresses submitted via waitlist forms (FlakeSecure early
+            access)
+          </li>
+        </ul>
+        <h2>3. Legal Basis for Processing</h2>
+        <ul>
+          <li>
+            <strong style="color: var(--text)">Contract performance</strong>
+            (Art. 6(1)(b) GDPR): Processing necessary to provide the services
+            you use.
+          </li>
+          <li>
+            <strong style="color: var(--text)">Legitimate interests</strong>
+            (Art. 6(1)(f) GDPR): Server logs and security monitoring.
+          </li>
+          <li>
+            <strong style="color: var(--text)">Consent</strong> (Art. 6(1)(a)
+            GDPR): Waitlist registrations and optional communications.
+          </li>
+        </ul>
+        <h2>4. Data Retention</h2>
+        <p>
+          FlakeTrader data is retained as long as your account is active or as
+          required to provide the service. You can request deletion at any time.
+          Access logs are purged after 30 days. Waitlist emails are deleted upon
+          request or once the waitlist period ends.
+        </p>
+        <h2>5. Third Parties</h2>
+        <p>
+          We do not sell your data to third parties. We may share data with:
+        </p>
+        <ul>
+          <li>
+            Infrastructure providers (hosting, database) under GDPR-compliant
+            data processing agreements
+          </li>
+          <li>
+            Discord (for bot functionality — governed by Discord's own Privacy
+            Policy)
+          </li>
+          <li>Market data providers (no personal data is shared)</li>
+        </ul>
+        <h2>6. Your Rights</h2>
+        <p>
+          Under the GDPR, you have the right to: access your data, request
+          rectification, request erasure ("right to be forgotten"), data
+          portability, restriction of processing, and to object to processing.
+          To exercise these rights, contact us at
+          <a href="mailto:privacy@snowystudio.dev">privacy@snowystudio.dev</a>.
+        </p>
+        <h2>7. Cookies</h2>
+        <p>
+          This website does not use tracking cookies or third-party analytics.
+          We use only essential session data required for functionality.
+        </p>
+        <h2>8. Security</h2>
+        <p>
+          We implement appropriate technical and organisational measures to
+          protect your data, including TLS encryption in transit, access
+          controls, and regular security reviews.
+        </p>
+        <h2>9. Changes</h2>
+        <p>
+          We may update this Privacy Policy. Material changes will be
+          communicated via our website or email (where applicable). Continued
+          use of our services after the effective date constitutes acceptance.
+        </p>
+        <h2>10. Contact</h2>
+        <p>
+          For any privacy-related queries:
+          <a href="mailto:privacy@snowystudio.dev">privacy@snowystudio.dev</a>
+        </p>
+      </div>
+      <footer>
+        <div class="footer-inner">
+          <div
+            class="footer-bottom"
+            style="padding-top: 1.5rem; border-top: 1px solid var(--border)"
+          >
+            <span>© 2026 SnowyStudio. All rights reserved.</span
+            ><span
+              ><a
+                onclick="showPage('imprint')"
+                style="
+                  color: var(--text-dim);
+                  cursor: pointer;
+                  text-decoration: none;
+                "
+                >Imprint</a
+              >
+              ·
+              <a
+                onclick="showPage('terms')"
+                style="
+                  color: var(--text-dim);
+                  cursor: pointer;
+                  text-decoration: none;
+                "
+                >Terms</a
+              ></span
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ═══════════════════════════ PAGE: TERMS ═══════════════════════════ -->
+    <div class="page" id="page-terms">
+      <div class="inner-hero" style="padding-bottom: 2rem">
+        <div class="breadcrumb">
+          <span onclick="showPage('home')">Home</span> ›
+          <span style="color: var(--text-muted)">Terms of Use</span>
+        </div>
+        <h1 style="font-size: clamp(1.8rem, 4vw, 3rem)">Terms of Use</h1>
+        <p>The rules that govern your use of Flake products by SnowyStudio.</p>
+      </div>
+      <div class="prose">
+        <p class="last-updated">
+          Last updated: January 2026 · Effective immediately upon use
+        </p>
+        <h2>1. Acceptance of Terms</h2>
+        <p>
+          By using any Flake product (including FlakeTrader and FlakeSecure),
+          you agree to be bound by these Terms of Use. If you do not agree,
+          please discontinue use immediately.
+        </p>
+        <h2>2. Description of Services</h2>
+        <h3>FlakeTrader</h3>
+        <p>
+          FlakeTrader is a Discord bot that provides simulated trading
+          functionality using fictional in-game currency ("Flake Coins" or ₣).
+          Market data displayed is sourced from third-party providers and is for
+          informational and entertainment purposes only. FlakeTrader does not
+          constitute financial advice.
+        </p>
+        <h3>FlakeSecure</h3>
+        <p>
+          FlakeSecure is an authentication service consisting of a mobile
+          application and browser extension. It provides password-free login
+          capabilities for supported websites and applications.
+        </p>
+        <h2>3. No Financial Advice</h2>
+        <p>
+          Nothing on FlakeTrader or any other Flake product constitutes
+          financial, investment, or trading advice. All trades are simulated
+          using fictional currency. Past simulated performance does not indicate
+          future real-world results. SnowyStudio accepts no liability for any
+          real financial decisions made based on information obtained through
+          our services.
+        </p>
+        <h2>4. User Responsibilities</h2>
+        <ul>
+          <li>
+            You must be at least 13 years old to use Flake products (or the
+            minimum age required by your jurisdiction).
+          </li>
+          <li>
+            You are responsible for maintaining the security of your account and
+            device.
+          </li>
+          <li>You must not use our services for any unlawful purpose.</li>
+          <li>
+            You must not attempt to reverse-engineer, scrape, or abuse the
+            services.
+          </li>
+          <li>
+            You must not use FlakeTrader to manipulate leaderboards through
+            exploits or cheating.
+          </li>
+        </ul>
+        <h2>5. Prohibited Conduct</h2>
+        <p>The following conduct is prohibited:</p>
+        <ul>
+          <li>
+            Attempting to gain unauthorised access to other users' accounts
+          </li>
+          <li>Distributing malware through any Flake-integrated interface</li>
+          <li>Automated scraping of market data beyond personal use</li>
+          <li>Impersonating SnowyStudio or any Flake product</li>
+        </ul>
+        <h2>6. Intellectual Property</h2>
+        <p>
+          All intellectual property in Flake products — including but not
+          limited to code, design, trademarks, and branding — belongs to
+          SnowyStudio. You are granted a limited, non-exclusive licence to use
+          our services for personal, non-commercial purposes.
+        </p>
+        <h2>7. Service Availability</h2>
+        <p>
+          We strive for high availability but cannot guarantee uninterrupted
+          service. We reserve the right to modify, suspend, or discontinue any
+          service at any time with reasonable notice.
+        </p>
+        <h2>8. Limitation of Liability</h2>
+        <p>
+          To the maximum extent permitted by law, SnowyStudio shall not be
+          liable for any indirect, incidental, special, consequential, or
+          punitive damages arising from your use of our services. Our total
+          liability shall not exceed the amounts paid by you to SnowyStudio in
+          the twelve months preceding the claim (if any).
+        </p>
+        <h2>9. Disclaimer of Warranties</h2>
+        <p>
+          Our services are provided "as is" and "as available" without
+          warranties of any kind, either express or implied. We do not warrant
+          that our services will be error-free or that defects will be
+          corrected.
+        </p>
+        <h2>10. Governing Law</h2>
+        <p>
+          These Terms are governed by the laws of Germany. Any disputes shall be
+          subject to the exclusive jurisdiction of German courts, unless
+          mandatory consumer protection law in your country provides otherwise.
+        </p>
+        <h2>11. Changes to Terms</h2>
+        <p>
+          We may update these Terms at any time. Continued use of our services
+          after changes are posted constitutes acceptance. We will notify users
+          of material changes via our website.
+        </p>
+        <h2>12. Contact</h2>
+        <p>
+          Questions about these Terms? Contact us at
+          <a href="mailto:legal@snowystudio.dev">legal@snowystudio.dev</a>.
+        </p>
+        <h2>13. Disclaimer</h2>
+        <p>
+          FlakeTrader is not affiliated with, maintained by, or endorsed by
+          Discord Inc.
+        </p>
+      </div>
+      <footer>
+        <div class="footer-inner">
+          <div
+            class="footer-bottom"
+            style="padding-top: 1.5rem; border-top: 1px solid var(--border)"
+          >
+            <span>© 2026 SnowyStudio. All rights reserved.</span
+            ><span
+              ><a
+                onclick="showPage('imprint')"
+                style="
+                  color: var(--text-dim);
+                  cursor: pointer;
+                  text-decoration: none;
+                "
+                >Imprint</a
+              >
+              ·
+              <a
+                onclick="showPage('privacy')"
+                style="
+                  color: var(--text-dim);
+                  cursor: pointer;
+                  text-decoration: none;
+                "
+                >Privacy</a
+              ></span
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ═══════════════════════════ COMMANDS POPUP ═══════════════════════════ -->
+    <div class="cmd-overlay" id="cmdOverlay" onclick="closeCmdPopup(event)">
+      <div class="cmd-modal" id="cmdModal">
+        <div class="cmd-modal-header">
+          <div class="cmd-modal-title">
+            <div class="icon">💬</div>
+            <div>
+              <h2>FlakeTrader Commands</h2>
+              <p>All available slash commands</p>
+            </div>
+          </div>
+          <button class="cmd-close" onclick="toggleCmdPopup()">&times;</button>
+        </div>
+        <div class="cmd-search-wrap">
+          <input
+            class="cmd-search"
+            id="cmdSearch"
+            placeholder="Search commands…"
+            oninput="filterCommands()"
+          />
+        </div>
+        <div class="cmd-tabs" id="cmdTabs">
+          <button class="cmd-tab active" onclick="setTab('all', this)">
+            All
+          </button>
+        </div>
+        <div class="cmd-list" id="cmdList"></div>
+        <div class="cmd-footer">
+          <span class="cmd-footer-hint">
+            <span class="kbd">Esc</span> to close ·
+            <span class="kbd">⌘K</span> to open
+          </span>
+          <span style="font-size: 0.75rem; color: var(--text-dim)"
+            >FlakeTrader by SnowyStudio</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script>
+      // ── PAGE ROUTING ──
+      function showPage(name) {
+        document
+          .querySelectorAll(".page")
+          .forEach((p) => p.classList.remove("active"));
+        document.getElementById("page-" + name).classList.add("active");
+        window.scrollTo(0, 0);
+        // update nav active state
+        document
+          .querySelectorAll(".nav-links a")
+          .forEach((a) => a.classList.remove("active"));
+        const map = {
+          home: "nav-home",
+          trader: "nav-trader",
+          secure: "nav-secure",
+        };
+        if (map[name])
+          document.getElementById(map[name])?.classList.add("active");
+      }
+
+      // ── TYPEWRITER ──
+      const words = [
+        "Powerful.",
+        "Intuitive.",
+        "Risk-Free.",
+        "Real-Time.",
+        "Smart.",
+        "Yours.",
+      ];
+      let current = 0;
+      function rotateWord() {
+        const prev = document.getElementById("word-" + current);
+        prev.classList.remove("visible");
+        current = (current + 1) % words.length;
+        const next = document.getElementById("word-" + current);
+        next.classList.add("visible");
+      }
+      setInterval(rotateWord, 2200);
+
+      // ── MOBILE MENU ──
+      let mobileOpen = false;
+      function toggleMobile() {
+        const links = document.querySelector(".nav-links");
+        mobileOpen = !mobileOpen;
+        links.style.display = mobileOpen ? "flex" : "";
+        if (mobileOpen) {
+          links.style.flexDirection = "column";
+          links.style.position = "fixed";
+          links.style.top = "64px";
+          links.style.left = "0";
+          links.style.right = "0";
+          links.style.background = "rgba(10,10,11,0.97)";
+          links.style.padding = "1rem 2rem 2rem";
+          links.style.borderBottom = "1px solid var(--border)";
+          links.style.zIndex = "999";
+        } else {
+          links.style = "";
+        }
+      }
+
+      // Close mobile menu on page change
+      const origShowPage = showPage;
+      window.showPage = function (name) {
+        origShowPage(name);
+        if (mobileOpen) toggleMobile();
+      };
+
+      window.onload = () => {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const siteName = urlParams.get("site");
+        if (siteName) {
+          showPage(siteName);
+        }
+      };
+
+      // ── WAITLIST SUBMIT ──
+      async function submitWaitlist(inputId, msgId) {
+        const input = document.getElementById(inputId);
+        const msg = document.getElementById(msgId);
+        const email = input.value.trim();
+
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          showWaitlistMsg(msg, "Please enter a valid email address.", "error");
+          return;
+        }
+
+        const btn = input.closest(".waitlist-form").querySelector("button");
+        btn.disabled = true;
+        btn.textContent = "Sending…";
+        msg.textContent = "";
+
+        try {
+          const res = await fetch("waitlist.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email }),
+          });
+          const data = await res.json();
+          if (data.success) {
+            showWaitlistMsg(msg, data.message, "success");
+            input.value = "";
+            btn.textContent = "Joined ✓";
+          } else {
+            showWaitlistMsg(
+              msg,
+              data.message || "Something went wrong.",
+              "error",
+            );
+            btn.disabled = false;
+            btn.textContent = "Join Waitlist";
+          }
+        } catch (e) {
+          showWaitlistMsg(msg, "Network error — please try again.", "error");
+          btn.disabled = false;
+          btn.textContent = "Join Waitlist";
+        }
+      }
+
+      function showWaitlistMsg(el, text, type) {
+        el.textContent = text;
+        el.style.color = type === "success" ? "var(--green)" : "var(--red)";
+      }
+
+      // ── COMMANDS POPUP ──
+      const COMMANDS = [
+        {
+          name: "/buy",
+          category: "Trading",
+          desc: "Buy an asset with your Flake Coin balance.",
+          params: [
+            { name: "asset", req: true },
+            { name: "amount", req: true },
+          ],
+        },
+        {
+          name: "/sell",
+          category: "Trading",
+          desc: "Sell an asset from your current portfolio.",
+          params: [
+            { name: "asset", req: true },
+            { name: "amount", req: true },
+          ],
+        },
+        {
+          name: "/short",
+          category: "Trading",
+          desc: "Open a short position on an asset. (added in future)",
+          params: [
+            { name: "asset", req: true },
+            { name: "amount", req: true },
+          ],
+        },
+        {
+          name: "/cover",
+          category: "Trading",
+          desc: "Close an open short position. (added in future)",
+          params: [
+            { name: "asset", req: true },
+            { name: "amount", req: false },
+          ],
+        },
+        {
+          name: "/balance",
+          category: "Portfolio",
+          desc: "Check your current Flake Coin (₣) balance.",
+          params: [],
+        },
+        {
+          name: "/history",
+          category: "Portfolio",
+          desc: "Show your recent trade history. (added in future)",
+          params: [{ name: "limit", req: false }],
+        },
+        {
+          name: "/market",
+          category: "Market",
+          desc: "Overview of top movers and trending assets.",
+          params: [
+            { name: "asset", req: false },
+            { name: "periode", req: false },
+          ],
+        },
+        {
+          name: "/top",
+          category: "Leaderboard",
+          desc: "Server leaderboard ranked by balance + all time earned.",
+          params: [{ name: "period", req: false }],
+        },
+        {
+          name: "/global",
+          category: "Leaderboard",
+          desc: "SGlobal leaderboard ranked by balance + all time earned.",
+          params: [],
+        },
+      ];
+
+      let activeTab = "all";
+
+      function buildTabs() {
+        const cats = ["All", ...new Set(COMMANDS.map((c) => c.category))];
+        document.getElementById("cmdTabs").innerHTML = cats
+          .map(
+            (c, i) =>
+              `<button class="cmd-tab ${i === 0 ? "active" : ""}" onclick="setTab('${c.toLowerCase()}',this)">${c}</button>`,
+          )
+          .join("");
+      }
+
+      function setTab(tab, el) {
+        activeTab = tab;
+        document
+          .querySelectorAll(".cmd-tab")
+          .forEach((t) => t.classList.remove("active"));
+        el.classList.add("active");
+        renderCommands();
+      }
+
+      function filterCommands() {
+        renderCommands();
+      }
+
+      function renderCommands() {
+        const q = (
+          document.getElementById("cmdSearch").value || ""
+        ).toLowerCase();
+        const list = document.getElementById("cmdList");
+        const filtered = COMMANDS.filter((c) => {
+          const matchTab =
+            activeTab === "all" || c.category.toLowerCase() === activeTab;
+          const matchQ =
+            !q ||
+            c.name.includes(q) ||
+            c.desc.toLowerCase().includes(q) ||
+            c.category.toLowerCase().includes(q);
+          return matchTab && matchQ;
+        });
+
+        if (!filtered.length) {
+          list.innerHTML = `<div class="cmd-empty">No commands found for "<strong>${q}</strong>"</div>`;
+          return;
+        }
+
+        const groups = {};
+        filtered.forEach((c) => {
+          (groups[c.category] = groups[c.category] || []).push(c);
+        });
+        const multiGroup = Object.keys(groups).length > 1;
+
+        list.innerHTML = Object.entries(groups)
+          .map(
+            ([cat, cmds]) => `
+      ${multiGroup ? `<div class="cmd-category-label">${cat}</div>` : ""}
+      ${cmds
+        .map(
+          (c) => `
+        <div class="cmd-item">
+          <span class="cmd-name">${c.name}</span>
+          <div class="cmd-info">
+            <div class="cmd-desc">${c.desc}</div>
+            ${
+              c.params.length
+                ? `<div class="cmd-params">
+              ${c.params.map((p) => `<span class="cmd-param ${p.req ? "required" : "optional"}">${p.req ? "" : "["}&lt;${p.name}&gt;${p.req ? "" : "]"}</span>`).join("")}
+            </div>`
+                : ""
+            }
+          </div>
+        </div>
+      `,
+        )
+        .join("")}
+    `,
+          )
+          .join("");
+      }
+
+      function toggleCmdPopup() {
+        const overlay = document.getElementById("cmdOverlay");
+        overlay.classList.toggle("open");
+        if (overlay.classList.contains("open")) {
+          buildTabs();
+          renderCommands();
+          setTimeout(() => document.getElementById("cmdSearch").focus(), 60);
+        }
+      }
+
+      function closeCmdPopup(e) {
+        if (e.target === document.getElementById("cmdOverlay"))
+          toggleCmdPopup();
+      }
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape")
+          document.getElementById("cmdOverlay").classList.remove("open");
+        if ((e.metaKey || e.ctrlKey) && e.key === "k") {
+          e.preventDefault();
+          toggleCmdPopup();
+        }
+      });
+    </script>
+  </body>
+</html>

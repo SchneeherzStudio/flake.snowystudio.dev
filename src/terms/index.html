@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flake — by SnowyStudio</title>
+    <meta property="og:title" content="Flake | Terms">
+    <meta property="og:description" content="Flake by SnowyStudio is a project with various products, all of which are free to use and have a high security standard." />
+    <meta property="og:image" content="https://flake.snowystudio.dev/img/Flake.png">
+    <meta property="og:url" content="https://flake.snowystudio.dev/terms">
+    <meta property="og:type" content="website">
+    <base href="../">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./img/Flake.png" type="image/x-icon">
+  </head>
+  <body>
+    <!-- ═══════════════════════════════════════ NAV ═══════════════════════════════════════ -->
+    <nav>
+      <a class="nav-logo" onclick="showPage('home')">
+        <div class="nav-logo-icon"><img src="./img/Flake.png" alt="Icon" class="icon"></div>
+        <div>
+          <span class="nav-logo-text">Flake</span>
+          <span class="nav-logo-sub"> by SnowyStudio</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a onclick="showPage('home')" id="nav-home">Home</a></li>
+        <li><a onclick="showPage('trader')" id="nav-trader">FlakeTrader</a></li>
+        <li><a onclick="showPage('secure')" id="nav-secure">FlakeSecure</a></li>
+        <li>
+          <a
+            onclick="showPage('home')"
+            id="nav-about"
+            style="color: var(--text-dim)"
+            >About</a
+          >
+        </li>
+        <li>
+          <a onclick="showPage('secure')" class="nav-cta">Get Early Access</a>
+        </li>
+      </ul>
+      <button class="nav-menu-toggle" onclick="toggleMobile()">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+          <path
+            d="M3 6h16M3 11h16M3 16h16"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- ═══════════════════════════ PAGE: TERMS ═══════════════════════════ -->
+    <div class="page" id="page-terms">
+      <div class="inner-hero" style="padding-bottom: 2rem">
+        <div class="breadcrumb">
+          <span onclick="showPage('home')">Home</span> ›
+          <span style="color: var(--text-muted)">Terms of Use</span>
+        </div>
+        <h1 style="font-size: clamp(1.8rem, 4vw, 3rem)">Terms of Use</h1>
+        <p>The rules that govern your use of Flake products by SnowyStudio.</p>
+      </div>
+      <div class="prose">
+        <p class="last-updated">
+          Last updated: January 2026 · Effective immediately upon use
+        </p>
+        <h2>1. Acceptance of Terms</h2>
+        <p>
+          By using any Flake product (including FlakeTrader and FlakeSecure),
+          you agree to be bound by these Terms of Use. If you do not agree,
+          please discontinue use immediately.
+        </p>
+        <h2>2. Description of Services</h2>
+        <h3>FlakeTrader</h3>
+        <p>
+          FlakeTrader is a Discord bot that provides simulated trading
+          functionality using fictional in-game currency ("Flake Coins" or ₣).
+          Market data displayed is sourced from third-party providers and is for
+          informational and entertainment purposes only. FlakeTrader does not
+          constitute financial advice.
+        </p>
+        <h3>FlakeSecure</h3>
+        <p>
+          FlakeSecure is an authentication service consisting of a mobile
+          application and browser extension. It provides password-free login
+          capabilities for supported websites and applications.
+        </p>
+        <h2>3. No Financial Advice</h2>
+        <p>
+          Nothing on FlakeTrader or any other Flake product constitutes
+          financial, investment, or trading advice. All trades are simulated
+          using fictional currency. Past simulated performance does not indicate
+          future real-world results. SnowyStudio accepts no liability for any
+          real financial decisions made based on information obtained through
+          our services.
+        </p>
+        <h2>4. User Responsibilities</h2>
+        <ul>
+          <li>
+            You must be at least 13 years old to use Flake products (or the
+            minimum age required by your jurisdiction).
+          </li>
+          <li>
+            You are responsible for maintaining the security of your account and
+            device.
+          </li>
+          <li>You must not use our services for any unlawful purpose.</li>
+          <li>
+            You must not attempt to reverse-engineer, scrape, or abuse the
+            services.
+          </li>
+          <li>
+            You must not use FlakeTrader to manipulate leaderboards through
+            exploits or cheating.
+          </li>
+        </ul>
+        <h2>5. Prohibited Conduct</h2>
+        <p>The following conduct is prohibited:</p>
+        <ul>
+          <li>
+            Attempting to gain unauthorised access to other users' accounts
+          </li>
+          <li>Distributing malware through any Flake-integrated interface</li>
+          <li>Automated scraping of market data beyond personal use</li>
+          <li>Impersonating SnowyStudio or any Flake product</li>
+        </ul>
+        <h2>6. Intellectual Property</h2>
+        <p>
+          All intellectual property in Flake products — including but not
+          limited to code, design, trademarks, and branding — belongs to
+          SnowyStudio. You are granted a limited, non-exclusive licence to use
+          our services for personal, non-commercial purposes.
+        </p>
+        <h2>7. Service Availability</h2>
+        <p>
+          We strive for high availability but cannot guarantee uninterrupted
+          service. We reserve the right to modify, suspend, or discontinue any
+          service at any time with reasonable notice.
+        </p>
+        <h2>8. Limitation of Liability</h2>
+        <p>
+          To the maximum extent permitted by law, SnowyStudio shall not be
+          liable for any indirect, incidental, special, consequential, or
+          punitive damages arising from your use of our services. Our total
+          liability shall not exceed the amounts paid by you to SnowyStudio in
+          the twelve months preceding the claim (if any).
+        </p>
+        <h2>9. Disclaimer of Warranties</h2>
+        <p>
+          Our services are provided "as is" and "as available" without
+          warranties of any kind, either express or implied. We do not warrant
+          that our services will be error-free or that defects will be
+          corrected.
+        </p>
+        <h2>10. Governing Law</h2>
+        <p>
+          These Terms are governed by the laws of Germany. Any disputes shall be
+          subject to the exclusive jurisdiction of German courts, unless
+          mandatory consumer protection law in your country provides otherwise.
+        </p>
+        <h2>11. Changes to Terms</h2>
+        <p>
+          We may update these Terms at any time. Continued use of our services
+          after changes are posted constitutes acceptance. We will notify users
+          of material changes via our website.
+        </p>
+        <h2>12. Contact</h2>
+        <p>
+          Questions about these Terms? Contact us at
+          <a href="mailto:legal@snowystudio.dev">legal@snowystudio.dev</a>.
+        </p>
+        <h2>13. Disclaimer</h2>
+        <p>
+          FlakeTrader is not affiliated with, maintained by, or endorsed by Discord Inc.
+        </p>
+      </div>
+      <footer>
+        <div class="footer-inner">
+          <div
+            class="footer-bottom"
+            style="padding-top: 1.5rem; border-top: 1px solid var(--border)"
+          >
+            <span>© 2026 SnowyStudio. All rights reserved.</span
+            ><span
+              ><a
+                onclick="showPage('imprint')"
+                style="
+                  color: var(--text-dim);
+                  cursor: pointer;
+                  text-decoration: none;
+                "
+                >Imprint</a
+              >
+              ·
+              <a
+                onclick="showPage('privacy')"
+                style="
+                  color: var(--text-dim);
+                  cursor: pointer;
+                  text-decoration: none;
+                "
+                >Privacy</a
+              ></span
+            >
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      function showPage(name) {
+        window.location.href = `../index.html?site=${name}`
+      }
+      // ── PAGE ROUTING ──
+      function initPage(name) {
+        document
+          .querySelectorAll(".page")
+          .forEach((p) => p.classList.remove("active"));
+        document.getElementById("page-" + name).classList.add("active");
+        window.scrollTo(0, 0);
+        // update nav active state
+        document
+          .querySelectorAll(".nav-links a")
+          .forEach((a) => a.classList.remove("active"));
+        const map = {
+          home: "nav-home",
+          trader: "nav-trader",
+          secure: "nav-secure",
+        };
+        if (map[name])
+          document.getElementById(map[name])?.classList.add("active");
+      }
+
+      initPage("terms");
+
+      // ── TYPEWRITER ──
+      const words = [
+        "Powerful.",
+        "Intuitive.",
+        "Risk-Free.",
+        "Real-Time.",
+        "Smart.",
+        "Yours.",
+      ];
+      let current = 0;
+      function rotateWord() {
+        const prev = document.getElementById("word-" + current);
+        prev.classList.remove("visible");
+        current = (current + 1) % words.length;
+        const next = document.getElementById("word-" + current);
+        next.classList.add("visible");
+      }
+      setInterval(rotateWord, 2200);
+
+      // ── MOBILE MENU ──
+      let mobileOpen = false;
+      function toggleMobile() {
+        const links = document.querySelector(".nav-links");
+        mobileOpen = !mobileOpen;
+        links.style.display = mobileOpen ? "flex" : "";
+        if (mobileOpen) {
+          links.style.flexDirection = "column";
+          links.style.position = "fixed";
+          links.style.top = "64px";
+          links.style.left = "0";
+          links.style.right = "0";
+          links.style.background = "rgba(10,10,11,0.97)";
+          links.style.padding = "1rem 2rem 2rem";
+          links.style.borderBottom = "1px solid var(--border)";
+          links.style.zIndex = "999";
+        } else {
+          links.style = "";
+        }
+      }
+
+      // Close mobile menu on page change
+      const origShowPage = showPage;
+      window.showPage = function (name) {
+        origShowPage(name);
+        if (mobileOpen) toggleMobile();
+      };
+    </script>
+  </body>
+</html>
