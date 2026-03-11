@@ -179,7 +179,7 @@ MAIL_NOTIFY=you@your-domain.com
 Additionally, update the following in `waitlist.php`:
 
 ```php
-$allowed_origin = 'https://snowystudio.dev';
+$allowed_origin = 'https://deine-domain.de';
 ```
 
 And replace all instances of `deine-domain.de` in the error pages and footer links.
